@@ -30,7 +30,6 @@ public class WebSecurityConfig {
                  .formLogin(Customizer.withDefaults());
         return http.build();
     }
-
     @Bean
     public UserDetailsService userDetailsService(){
         return userRepository::findByUsername;
