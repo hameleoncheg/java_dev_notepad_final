@@ -4,7 +4,6 @@ import go.it.java_dev_spring.entity.Note;
 import go.it.java_dev_spring.repository.NoteRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.*;
 
 @RequiredArgsConstructor
@@ -21,6 +20,8 @@ public class NoteService {
     public Note add(Note note) {
         long id = random.nextLong();
         note.setId(id);
+        note.setAccess("private");
+        note.setUser_id(1);
         noteRepository.save(note);
         return note;
     }
