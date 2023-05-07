@@ -14,7 +14,6 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 @Configuration
 public class WebSecurityConfig {
-
     private final UserRepository userRepository;
 
     @Bean
@@ -32,6 +31,6 @@ public class WebSecurityConfig {
     }
     @Bean
     public UserDetailsService userDetailsService(){
-        return userRepository::findByUsername;
+        return userRepository::findByEmail;
     }
 }

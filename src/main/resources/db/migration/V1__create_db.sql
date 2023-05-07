@@ -1,5 +1,9 @@
-CREATE TABLE note(
-                     ID INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-                     title VARCHAR (255),
-                     content VARCHAR (2048)
+
+CREATE TABLE users (
+                       USER_ID INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+                       EMAIL VARCHAR(255) NOT NULL unique,
+                       PASSWORD VARCHAR(255) NOT NULL,
+                       ROLE VARCHAR(255) NOT NULL,
+                       ENABLED INT DEFAULT NULL
+
 );

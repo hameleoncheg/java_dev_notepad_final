@@ -14,4 +14,6 @@ public class Note {
     private long id;
     private String title;
     private String content;
+    private String access;
+    private long user_id;
 }
